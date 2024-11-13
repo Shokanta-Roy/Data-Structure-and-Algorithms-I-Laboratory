@@ -1,0 +1,4 @@
+Selection sort is based on the comperism element to element.
+First of all we need to find out the minimun index value of the array,
+than swap it with the first index value.
+After the first process, 
