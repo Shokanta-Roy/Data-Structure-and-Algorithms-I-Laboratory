@@ -1,0 +1,18 @@
+target element;
+mid= (low+(high-low))/2;
+while(low<= high)
+{
+    if(arr[mid]==target)
+    {
+        return mid;
+    }
+    else if(arr[mid]>target)
+    {
+        high=mid-1;
+    }
+    else if(arr[mid]<target)
+    {
+        low=mid+1;
+    }
+    return -1; //target not found;
+}
