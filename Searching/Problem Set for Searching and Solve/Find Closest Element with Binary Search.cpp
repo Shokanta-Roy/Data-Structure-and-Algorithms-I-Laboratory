@@ -1,44 +1,55 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
-int find_closest_element(int arr[], int size, int target)
+int find_closest(int arr[], int size, int target)
 {
-    int low=0, high=size-1;
-
-    while (low<=high)
+    int low = 0, high = size - 1;
+    int closest = arr[0];
+    while (low <= high)
     {
-        int mid=(low+high)/2;
-        if (arr[mid]==target)
+        int mid = low + (high - low) / 2;
+
+        // Update the closest element if the current mid is closer to the target
+        if (abs(arr[mid] - target) < abs(closest - target))
         {
-            return arr[mid];
+            closest = arr[mid];
         }
-        else if (arr[mid]<target)
+
+        // Adjust search range
+        if (arr[mid] == target)
         {
-            low=mid;
+            return arr[mid]; // Exact match found
+        }
+        else if (arr[mid] < target)
+        {
+            low = mid + 1;
         }
         else
         {
-            high=mid;
+            high = mid - 1;
         }
     }
 
-    if (abs(arr[low]-target))
-    {
-        /* code */
-    }
-    
-    
+    return closest;
 }
+
 int main()
 {
-    int n; cin>>n;
-    int arr[n+1];
+    int n;
+    cin >> n;
+
+    int arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin>>arr[i];
+        cin >> arr[i];
     }
-    int target; cin>>target;
 
+    int target;
+    cin >> target;
 
-    
+    int result = find_closest(arr, n, target);
+    cout << result << endl;
+
+    return 0;
 }

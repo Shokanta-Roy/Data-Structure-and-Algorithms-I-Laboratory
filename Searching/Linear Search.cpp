@@ -26,8 +26,8 @@ int main()
     {
         cin>>arr[i];
     }
-    //int size= sizeof(arr)/sizeof(arr[0]);
-    int result=linear_search(arr,n,x);
+    int size= sizeof(arr)/sizeof(arr[0]);
+    int result=linear_search(arr,size,x);
     if (result==-1)
     {
         cout<<"Not Found"<<endl;
