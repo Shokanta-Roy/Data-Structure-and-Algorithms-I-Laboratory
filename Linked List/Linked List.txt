@@ -1,0 +1,26 @@
+Array=>
+
+	Data Structure: Contiguous
+	Memory Allocation: Typically allocated to the whole array
+	Insertion/Deletion: Inefficient
+	Access: Random
+
+Linked List=>
+
+	Data Structure: Non-contiguous
+	Memory Allocation: Typically allocated one by one to individual elements
+	Insertion/Deletion: Efficient
+	Access: Sequential
+
+Operations: 
+	1.insert.
+	     >insert at first.
+	     >insert at last.
+	     >insert anywhere.
+	2.Delete.
+	     >delete at first.
+	     >delete at last.
+	     >delete anywhere.
+	3.Search.
+
+
