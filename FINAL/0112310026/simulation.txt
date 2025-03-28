@@ -1,0 +1,50 @@
+Problem 1:
+Exp: "5 1 2 + 4 * + 3 -"
+step1: Initialize an empty stack
+stack[];
+
+step2:
+Token		Action					Stack after action
+5		push 5					[5]				
+1		push 1					[5,1]
+2		push 2					[5,1,2]
++		pop 1,2->compute 1+2=3-> push 3		[5,3]
+4		push 4					[5,3,4]
+*		pop 3,4->compute 3*4=12-> push 12	[15,12]
++		pop 5,12->compute 5+12=17-> push 17	[17]
+3		push 3					[17,3]
+-		pop 17,3->compute 17-3=14-> push 14	[14]
+
+
+
+
+
+Problem 2:
+Given Input:
+k=3;
+Queue before reversal: [1,2,3,4,5];
+step1: Push first k elements onto stack
+stack(top->bottom)	Queue after popping
+3			[4,5]
+2			[4,5]
+1			[4,5]
+
+step2: Pop from stack & Enqueue back
+stack(top->bottom)	Queue after enqueueing
+(empty)			[4,5,3,2,1]
+
+step3: Move remaining elements to back
+Queue Before Move	Queue after Move
+[4,5,3,2,1]		[3,2,1,4,5]
+
+
+
+
+
+Problem 3:
+Step	Queue	Processing Node		Updated Distance Array
+1	[0]	0			[0,1,1,..](added 1&2)
+2	[1,2]	1			[0,1,1,2,2](added 3&4)
+3	[2,3,4]	2			[0,1,1,2,2](No changes)
+4	[3,4]	3			[0,1,1,2,2](No changes)
+5	[4]	4			[0,1,1,2,2](No changes)
